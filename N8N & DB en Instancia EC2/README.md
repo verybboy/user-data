@@ -1,6 +1,6 @@
 # Script de Instalación de n8n (User Data)
 
-Este repositorio contiene el archivo `n8n_data_user.sh`, un script de *User Data* diseñado para automatizar la instalación y despliegue de **n8n** utilizando Docker en instancias EC2 de Ubuntu (22.04 / 24.04).
+Este repositorio contiene el archivo `n8n_data_user.sh`, un script de *User Data* diseñado para automatizar la instalación y despliegue de **n8n** junto con su base de datos **PostgreSQL** (alojada en la misma instancia) utilizando Docker en instancias EC2 de Ubuntu (22.04 / 24.04).
 
 ## ⚠️ Cambios Obligatorios de Seguridad
 
