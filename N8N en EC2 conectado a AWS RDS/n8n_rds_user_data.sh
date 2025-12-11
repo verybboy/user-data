@@ -42,7 +42,7 @@ cd /opt/n8n
 # =======================================
 #   Crear archivo .env
 # =======================================
-cat << 'EOF' > /opt/n8n/.env
+cat << EOF > /opt/n8n/.env
 DB_HOST=TU_ENDPOINT_RDS
 DB_PORT=5432
 DB_DATABASE=n8n_db
@@ -55,10 +55,10 @@ DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
 
 # Configuración n8n
 N8N_PORT=5678
-N8N_HOST=0.0.0.0
+N8N_HOST=\$(curl -s ifconfig.me)
 N8N_PROTOCOL=http
 GENERIC_TIMEZONE=Europe/Madrid
-N8N_ENCRYPTION_KEY=CLAVELARGAUNICA
+N8N_ENCRYPTION_KEY=\$(openssl rand -hex 16)
 
 # Login web
 N8N_BASIC_AUTH_ACTIVE=true
